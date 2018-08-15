@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const OTP = require('../models/test');
-const accountSid = 'your_twilio_accountsid';
-const authToken = 'your_twilio_accountsid';
+const accountSid = 'ACe9f4ae4536388c6a43e16e8396c6e907';
+const authToken = 'cba290877941edadebc5639d1e2ad15b';
 
 const client = require('twilio')(accountSid, authToken);
 
