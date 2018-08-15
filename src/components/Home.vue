@@ -1,18 +1,18 @@
 <template>
         <div class="container-fuild">
             <nav class="navbar is-light">
-                <div class="navbar-brand">
+                    <div class="navbar-brand">
                     <router-link class="navbar-item" href="" to="/">
                         OPT-SMS
                     </router-link>
-                    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <div class="navbar-burger burger" :class="{'is-active': isActive}" @click="isActive = !isActive">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
 
-                <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-menu" :class="{'is-active': isActive}">
                     <div class="navbar-start">
             
                         <router-link to="/list" class="navbar-item" >Contact List</router-link>
@@ -60,11 +60,12 @@
 </template>
 
 <script>
-   
+
     export default {
         data(){
             return{
-                isHome: false
+                isHome: false,
+                isActive: false
             }
         },
         methods:{
