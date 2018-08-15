@@ -24,7 +24,7 @@
                     <div class="navbar-item">
                         <div class="field is-grouped">
                         <p class="control">
-                           <a href="" class="bd-gt-button button">
+                           <a href="https://github.com/mdashikar/mevn-user-reg-module/blob/master/README.md" class="bd-gt-button button">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -35,11 +35,11 @@
                             
                         </p>
                         <p class="control">
-                            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
+                            <a class="button is-primary" href="https://github.com/mdashikar/otp-send-mevn/archive/master.zip">
                             <span class="icon">
                                 <i class="fas fa-download"></i>
                             </span>
-                            <span>Download</span>
+                            <span>Download Source Code</span>
                             </a>
                         </p>
                         </div>
