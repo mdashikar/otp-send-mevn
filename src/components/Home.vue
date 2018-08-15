@@ -24,7 +24,7 @@
                     <div class="navbar-item">
                         <div class="field is-grouped">
                         <p class="control">
-                           <a href="https://github.com/mdashikar/mevn-user-reg-module/blob/master/README.md" class="bd-gt-button button">
+                           <a href="https://github.com/mdashikar/otp-send-mevn/blob/master/README.md" target="_blank" class="bd-gt-button button">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
