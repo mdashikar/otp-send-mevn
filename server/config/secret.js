@@ -1,4 +1,4 @@
 module.exports = {
-    database : 'mongodb://root:abc123@ds255258.mlab.com:55258/practice',
+    database : 'db_url_here',
     secret: '$43@#asb)9!~asd&^%'
 };
