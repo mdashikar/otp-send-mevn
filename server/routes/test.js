@@ -6,7 +6,7 @@ const authToken = 'cba290877941edadebc5639d1e2ad15b';
 const client = require('twilio')(accountSid, authToken);
 
 
-
+// fake json data returns 
 router.get('/getdata', (req, res) => {
     res.json(
         [
@@ -329,6 +329,7 @@ router.get('/getdata', (req, res) => {
     );
 })
 
+// return all users which are stored in db
 router.get('/get-otp-users', (req, res) => {
     // OTP.find({}, null, {sort: '-date'}, function(err, users){
     //   if(err){
@@ -341,6 +342,7 @@ router.get('/get-otp-users', (req, res) => {
     });
 });
 
+// stored user info, opt database and sent OPT to as text messages
 router.post('/send-opt', (req, res) => {
     var myData = new OTP({
         otpNumber :req.body.otpNumber,

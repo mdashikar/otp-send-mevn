@@ -7,7 +7,6 @@ var Schema = mongoose.Schema;
 var OneTimePassSchema = new Schema({
     otpNumber: Number,
     userInfo: [{
-        
     }],
     phoneNumber: String,
     updated: { type: Date, default: Date.now }

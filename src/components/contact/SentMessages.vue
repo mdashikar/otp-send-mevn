@@ -15,6 +15,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                     <!--loop through sent messages user list and set every rows -->
                     <tr v-for="(item, index) in sentMessages " v-bind:key="item">
                         <th>{{index+=1}}</th>
                         <!--<td><img :src="item.picture"></td> -->
@@ -48,15 +49,19 @@ export default {
     methods:{
         getSentMessages(){
             //call API
+            // fetch data from Db and stored data into sentMessages
             axios.get( ('http://otp.mdashikar.com/get-otp-users')).
                 then( (res) => {
                     console.log(res)
                     this.sentMessages = res.data;
+                }).catch((e) => {
+                    console.log(e);
                 })
 
         }
     },
     mounted(){
+        // this function is called onload
         this.getSentMessages()
     }
 }

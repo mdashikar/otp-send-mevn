@@ -17,6 +17,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!--loop through contactlist and set every rows -->
                     <tr v-for="(item, index) in contactList " v-bind:key="item">
                         <th>{{index+=1}}</th>
                         <!--<td><img :src="item.picture"></td> -->
@@ -49,6 +50,7 @@ export default {
             }
         },
         methods:{
+            // get fake user data from back-end
             getContactList(){
                 //call API
                 axios.get( ('http://otp.mdashikar.com/getdata')).
@@ -56,10 +58,14 @@ export default {
                         console.log(res)
                         this.contactList = res.data;
                     })
+                    .catch( e => {
+                        console.log(e)
+                    })
 
             }
         },
         mounted(){
+            // call this function on load 
             this.getContactList()
         }
 }

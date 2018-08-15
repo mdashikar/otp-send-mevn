@@ -63,20 +63,24 @@ export default {
     methods:{
         getContactDetails(){
             //call API
+            // get user data from back-end 
             axios.get( ('http://otp.mdashikar.com/getdata')).
                 then( (res) => {
                     this.contactDetails = res.data;
 
                     var toFind = this.userId;
+                    // stored single user info in details 
                     this.details = this.contactDetails.filter(function(el) {
                         return el._id === toFind;
                     });
    
                 })
         },
+        //generate random 6 digit OTP numbers
         generateNumber(){
             return this.otpNumber = Math.floor(100000 + Math.random() * 900000)
         },
+        // post user details and otp number to backend
         sendOptNumber(){
             this.loading = true;
             axios.post('http://otp.mdashikar.com/send-opt', {
@@ -95,6 +99,7 @@ export default {
         
     },
     mounted(){
+        //called onload 
         this.getContactDetails()
     }
 }
