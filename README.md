@@ -1,30 +1,31 @@
-# mevn-user-reg-module
+# Simple OTP Sms Sending Via Twilio
 
-> This is a user registartion module using mongodb expressjs vuejs nodejs passportjs etc.
+This is a simple OTP sms sending app with vue,node,express,mongodb.
 
-## Build Setup
+To use this app you need to modification just add your db url and your twilio accountSid and authToken. Fistly go to server folder then config folder you will find secret.js open it update your db.
 
-``` bash
-# install dependencies
+In server/routes folder you will find a test.js open it and add your twilio accountSid and authToken. Then you are good to go.
+
+# Build Setup
+#install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+#serve in Dev mode both clientside and serverside just change start script
+
+-> "start": "concurrently \"npm run dev\" \"nodemon server/server.js\"",
+
+#serve vue and node 
+npm start
+
+#serve in Production mode just change start script
+-> "start": "node server/server.js",
+
+
+#serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+#build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
+#build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
